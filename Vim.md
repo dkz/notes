@@ -108,7 +108,6 @@ Among other things markdown plugin supports concealing. However it does not
 define bold and italic styles, which visually makes emphasised text look like
 regular. Also folding causes problems with code blocks.
 ```
-
 set conceallevel=2
 highlight htmlItalic cterm=italic
 highlight htmlBold cterm=bold
@@ -139,16 +138,16 @@ path. This folder can be simply served by a nginx web server. My configuration
 in `/etc/nginx/sites-available/vimwiki` looks like this:
 ```
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+  listen 80 default_server;
+  listen [::]:80 default_server;
   root /home/kozlov/vimwiki_html;
-	index index.html;
-	server_name _;
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
-	}
+  index index.html;
+  server_name _;
+  location / {
+    # First attempt to serve request as file, then
+    # as directory, then fall back to displaying a 404.
+    try_files $uri $uri/ =404;
+  }
 }
 ```
 
