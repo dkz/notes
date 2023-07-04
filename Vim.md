@@ -1,5 +1,13 @@
 # Vim
 
+## Input
+
+Enable insert mode key map to type in languages other than English.
+Input language can be switched with `C-^` in insert mode.
+```
+nnoremap <Leader>k :set keymap=russian-jcukenwin<CR>
+```
+
 ## Airline
 
 Airline is useful as it is tightly integrated into various plugins like ALE and
